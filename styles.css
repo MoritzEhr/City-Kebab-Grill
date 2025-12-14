@@ -1285,6 +1285,70 @@ body {
   color: hsl(var(--card-foreground));
 }
 
+/* Checkbox Option Styles */
+.extra-option-checkbox {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: hsl(var(--secondary) / 0.3);
+  border-radius: 0.75rem;
+  border: 1px solid hsl(var(--border));
+  transition: all 0.2s;
+}
+
+.extra-option-checkbox:hover {
+  background-color: hsl(var(--secondary) / 0.5);
+}
+
+.extra-option-checkbox .checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.extra-option-checkbox .checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 0.125rem;
+  cursor: pointer;
+  accent-color: hsl(var(--primary));
+}
+
+.extra-option-checkbox .checkbox-content {
+  flex: 1;
+}
+
+.extra-option-checkbox .checkbox-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: hsl(var(--card-foreground));
+}
+
+.extra-option-checkbox .checkbox-desc {
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+  margin-top: 0.25rem;
+}
+
+/* CO2 Option - Confirm Shaming */
+.co2-option .shame-label .checkbox-header span {
+  color: hsl(var(--destructive));
+}
+
+.co2-option .shame-label {
+  background-color: hsl(var(--destructive) / 0.05);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin: -0.5rem;
+}
+
+.co2-option .shame-label .checkbox-desc {
+  color: hsl(var(--muted-foreground));
+}
+
 .cart-footer {
   padding: 1rem;
   border-top: 1px solid hsl(var(--border));

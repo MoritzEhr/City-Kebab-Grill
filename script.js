@@ -875,28 +875,32 @@ const categories = [
                         <p class="tip-amount">Tip: ${totals.tipAmount.toFixed(2)}€</p>
                       ` : ""}
                     </div>
-                    <label class="extra-option">
-                      <input type="checkbox" id="insurance" ${cartState.hasInsurance ? "checked" : ""}>
-                      <div class="extra-option-content">
-                        <div class="extra-option-header">
-                          <i class="fa-solid fa-shield-halved extra-option-icon" style="color: #3b82f6;"></i>
-                          <span class="extra-option-title">Delivery Insurance</span>
+                    <div class="extra-option-checkbox">
+                      <label class="checkbox-label">
+                        <input type="checkbox" id="insurance" ${cartState.hasInsurance ? "checked" : ""}>
+                        <span class="checkbox-custom"></span>
+                        <div class="checkbox-content">
+                          <div class="checkbox-header">
+                            <i class="fa-solid fa-shield-halved" style="color: #3b82f6;"></i>
+                            <span>Yes, I want delivery insurance</span>
+                          </div>
+                          <p class="checkbox-desc">Protect your order against any issues (+0.99€)</p>
                         </div>
-                        <p class="extra-option-desc">Protection for issues</p>
-                      </div>
-                      <span class="extra-option-price">+0.99€</span>
-                    </label>
-                    <label class="extra-option">
-                      <input type="checkbox" id="co2" ${cartState.isCO2Neutral ? "checked" : ""}>
-                      <div class="extra-option-content">
-                        <div class="extra-option-header">
-                          <i class="fa-solid fa-leaf extra-option-icon" style="color: #22c55e;"></i>
-                          <span class="extra-option-title">CO2-Neutral Delivery</span>
+                      </label>
+                    </div>
+                    <div class="extra-option-checkbox co2-option">
+                      <label class="checkbox-label ${cartState.isCO2Neutral ? '' : 'shame-label'}">
+                        <input type="checkbox" id="co2" ${cartState.isCO2Neutral ? "checked" : ""}>
+                        <span class="checkbox-custom"></span>
+                        <div class="checkbox-content">
+                          <div class="checkbox-header">
+                            <i class="fa-solid fa-leaf" style="color: #22c55e;"></i>
+                            <span>${cartState.isCO2Neutral ? "Yes, I care about the environment" : "No, I don't care about the environment"}</span>
+                          </div>
+                          <p class="checkbox-desc">${cartState.isCO2Neutral ? "Thank you for supporting climate protection! (+0.49€)" : "Check this to support CO2-neutral delivery (+0.49€)"}</p>
                         </div>
-                        <p class="extra-option-desc">Support climate protection</p>
-                      </div>
-                      <span class="extra-option-price">+0.49€</span>
-                    </label>
+                      </label>
+                    </div>
                   </div>
                 </div>
               </div>
